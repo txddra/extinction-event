@@ -21,3 +21,16 @@ const opacity = function (event) {
 for (const li of uls) {
   li.addEventListener('click', opacity);
 }
+
+
+//the divs with the images 
+const pics = document.querySelectorAll('div img');
+//changes the width over a period of time
+const picOpacity = function (event) {
+  event.target.style.width = '0px'
+  event.target.style.transition = '2s'
+}
+//event listener added  
+for (const img of pics) {
+  img.addEventListener('click', picOpacity)
+}
