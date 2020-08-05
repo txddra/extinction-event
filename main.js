@@ -3,13 +3,14 @@ const ols = document.querySelectorAll('ol li')
 //create the function that will be executed
 const lineThrough = function (event) {
     event.target.style.textDecoration = 'line-through';
-  };
+  
   //adds event listener to the selection
 
-for (const li of ols) {
-    li.addEventListener('click', lineThrough);
 }
 
+for(const li of ols) {
+    li.addEventListener('click', lineThrough);
+}
 //selects all the list items in the unordered list
 const uls = document.querySelectorAll('ul li');
 //creates a function that alters the opacity  
@@ -34,3 +35,14 @@ const picOpacity = function (event) {
 for (const img of pics) {
   img.addEventListener('click', picOpacity)
 }
+
+//found the one button div
+const button = document.querySelector('#destroy-all')
+//should be able to fuse all the pre-made functions?
+const destroy = function(){
+    lineThrough();
+    opacity();
+    picOpacity();
+}
+
+button.addEventListener('click', destroy)
