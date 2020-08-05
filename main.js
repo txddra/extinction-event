@@ -9,3 +9,15 @@ const lineThrough = function (event) {
 for (const li of ols) {
     li.addEventListener('click', lineThrough);
 }
+
+//selects all the list items in the unordered list
+const uls = document.querySelectorAll('ul li');
+//creates a function that alters the opacity  
+const opacity = function (event) {
+  event.target.style.opacity = '0';
+};
+//adds the event listener
+
+for (const li of uls) {
+  li.addEventListener('click', opacity);
+}
